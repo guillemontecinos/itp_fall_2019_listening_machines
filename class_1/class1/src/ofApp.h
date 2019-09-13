@@ -8,10 +8,15 @@ class ofApp : public ofBaseApp{
     
         ofSoundStream soundStream;
         ofColor backgroundColor;
+        int sampleRate;
+        int frameSize;
     
         vector<float> leftBuffer;
         vector<float> rightBuffer;
         vector<float> audioBuffer;
+        vector<float> audioBuffer150;
+        vector<float> audioBuffer300;
+        vector<float> audioBuffer500;
 		
         void setup();
 		void update();
@@ -30,4 +35,5 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
         void audioIn(ofSoundBuffer &inBuffer);
+        void audioOut(ofSoundBuffer &outBuffer);
 };
