@@ -42,3 +42,9 @@ if(recording){
 ```c++
 map<string, float> stringFloatMap;
 ```
+
+# Class 5: Music Information Retrieval
+* [Librosa (py)](https://librosa.github.io/librosa/)
+* [Meyda.js](https://meyda.js.org/)
+* [Music Information Retrieval](https://musicinformationretrieval.com/)
+* Unity has a [built-in DSP](https://docs.unity3d.com/Manual/AudioMixerNativeAudioPlugin.html)
