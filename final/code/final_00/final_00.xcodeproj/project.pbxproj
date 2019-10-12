@@ -425,7 +425,7 @@
 		AE0B6E50DD0C31996E3F1FB5 /* dsdiffdiintag.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dsdiffdiintag.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/taglib/include/taglib/dsdiffdiintag.h; sourceTree = SOURCE_ROOT; };
 		AEDA5C3D572FEE7781617BA6 /* mp4file.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mp4file.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/taglib/include/taglib/mp4file.h; sourceTree = SOURCE_ROOT; };
 		AF4FD87989CBB95E42A02CFB /* essentiamath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = essentiamath.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/essentia/include/essentia/essentiamath.h; sourceTree = SOURCE_ROOT; };
-		AFBE6BEC48579CBFC2F463E3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/VideoToolbox.framework; sourceTree = "<group>"; };
+		AFBE6BEC48579CBFC2F463E3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/VideoToolbox.framework; sourceTree = "<group>"; };
 		B02511CBE90E49526207FB78 /* yamlast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = yamlast.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/essentia/include/essentia/utils/yamlast.h; sourceTree = SOURCE_ROOT; };
 		B0AD13106B9AA9778BA5CFD5 /* algorithm.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = algorithm.cpp; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/essentia/include/essentia/algorithm.cpp; sourceTree = SOURCE_ROOT; };
 		B105B6477F58A6E1424ECAB4 /* wavfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = wavfile.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/taglib/include/taglib/wavfile.h; sourceTree = SOURCE_ROOT; };
@@ -450,7 +450,7 @@
 		B98214E7CA8A649A84124B46 /* silence_remover.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = silence_remover.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/chromaprint/include/silence_remover.h; sourceTree = SOURCE_ROOT; };
 		B9A24BDBDDB6536CD0B5DD1B /* moving_average.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = moving_average.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/chromaprint/include/moving_average.h; sourceTree = SOURCE_ROOT; };
 		BA5746E9455E9AC090A2FB3D /* vorbisfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vorbisfile.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/libvorbis/include/vorbis/vorbisfile.h; sourceTree = SOURCE_ROOT; };
-		BA920B139AFD82B0F9089910 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/QtCore.framework; sourceTree = "<group>"; };
+		BA920B139AFD82B0F9089910 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/QtCore.framework; sourceTree = "<group>"; };
 		BAABFA570793A4BCA9EE9CD8 /* vectorinput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vectorinput.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/essentia/include/essentia/streaming/algorithms/vectorinput.h; sourceTree = SOURCE_ROOT; };
 		BB88F9816B7CCEC535D30A76 /* metadatautils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = metadatautils.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/essentia/include/essentia/utils/metadatautils.h; sourceTree = SOURCE_ROOT; };
 		BBEE3A5BA5CC5C4FEC75BDCE /* pkcs11.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pkcs11.h; path = ../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gnutls/include/gnutls/pkcs11.h; sourceTree = SOURCE_ROOT; };
@@ -1285,6 +1285,15 @@
 			name = x264;
 			sourceTree = "<group>";
 		};
+		83711B4CF1E5D266281F9419 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA920B139AFD82B0F9089910 /* QtCore.framework */,
+				AFBE6BEC48579CBFC2F463E3 /* VideoToolbox.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
 		83C89E91C3EB7543F59234A0 /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -1908,8 +1917,7 @@
 				AAD7524A8BF0C2309F2F1B54 /* x265 */,
 				329B4AF427D319BE746DA4F9 /* xvid */,
 				946456B4FE8F1947F2B22951 /* xz */,
-				BA920B139AFD82B0F9089910 /* QtCore.framework */,
-				AFBE6BEC48579CBFC2F463E3 /* VideoToolbox.framework */,
+				83711B4CF1E5D266281F9419 /* frameworks */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -2552,6 +2560,7 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/include,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib/osx,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib/osx,
@@ -2656,6 +2665,8 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib/osx,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/src,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/VideoToolbox.framework/Headers,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/QtCore.framework/Headers,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -2675,8 +2686,8 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs,
-					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
@@ -2723,6 +2734,7 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/include,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib/osx,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib/osx,
@@ -2827,6 +2839,8 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib/osx,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/src,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/VideoToolbox.framework/Headers,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/QtCore.framework/Headers,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -2999,6 +3013,7 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/include,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib/osx,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib/osx,
@@ -3103,6 +3118,8 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib/osx,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/src,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/VideoToolbox.framework/Headers,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/QtCore.framework/Headers,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3176,6 +3193,7 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/include,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib/osx,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib/osx,
@@ -3280,6 +3298,8 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib/osx,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/src,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/VideoToolbox.framework/Headers,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/QtCore.framework/Headers,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -3299,8 +3319,8 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs,
-					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -3347,6 +3367,7 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/include,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib/osx,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib/osx,
@@ -3451,6 +3472,8 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib/osx,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/src,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/VideoToolbox.framework/Headers,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/QtCore.framework/Headers,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -3570,8 +3593,8 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs,
-					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
@@ -3617,6 +3640,7 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/include,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/fftw3f/lib/osx,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/gaia/lib/osx,
@@ -3721,6 +3745,8 @@
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/xz/lib/osx,
 					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/src,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/VideoToolbox.framework/Headers,
+					../../../../../of_v0.10.1_osx_release/addons/ofxMLTK/libs/frameworks/QtCore.framework/Headers,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";

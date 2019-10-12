@@ -51,7 +51,7 @@ public:
     bool showCoefs = true;
     
     int numberOfOutputChannels = 0;
-    int numberOfInputChannels = 2;
+    int numberOfInputChannels = 1;
     int sampleRate = 44100;
     int frameSize = 1024;
     int numberOfBuffers = 4;
@@ -82,7 +82,7 @@ public:
     //============ Animation Stuff ===============
     
     //============ Sound Stuff ===============
-    ofSoundPlayer kick;
+//    ofSoundPlayer kick;
     //============ Sound Stuff ===============
 };
 

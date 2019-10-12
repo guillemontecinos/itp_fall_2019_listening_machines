@@ -57,10 +57,11 @@
 		A9A16B1E62191E33535D39D3 /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F63C79BA3EC38360C02D550C /* MyAppDelegate.mm */; };
 		AEF3794E1417BE70D46EE943 /* ARAnchorManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD3D5F06C4CBFD03A515A2B2 /* ARAnchorManager.mm */; };
 		AF1C01FC91AA2580FA8D6090 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49FCF65BB7661C1CFB68038 /* ofxBaseGui.cpp */; };
+		B30D7C4E23524E1300037BA2 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D93829FEEEC39C6BD71F351B /* Shaders.metal */; };
 		B3ADB2BCC06A81BBDFAB9281 /* ringbuffervectoroutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCC3B8B2143308BA9DA7DFEC /* ringbuffervectoroutput.cpp */; };
-		B3EBDC0D2347B269000A1374 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D93829FEEEC39C6BD71F351B /* Shaders.metal */; };
 		B4BF2E6380A13835D50A1065 /* ringbufferoutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD305DA48BC5E4AA364028D4 /* ringbufferoutput.cpp */; };
 		B8AA29986C8CFF5088BDEB44 /* connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9F44EC8C74EC0D36B8F6C84 /* connector.cpp */; };
+		B9A9F4EDD389FB8CB261F1E4 /* nnlschroma.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A6371B6A6632FD4618749CD /* nnlschroma.cpp */; };
 		BB16EBD20F2B2A9500518274 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD10F2B2A9500518274 /* OpenGLES.framework */; };
 		BB16EBD90F2B2AB500518274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD80F2B2AB500518274 /* QuartzCore.framework */; };
 		BBE5EAB80F49AD8400F28951 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */; };
@@ -133,6 +134,7 @@
 		101AF9C0BBBA8A3FE0F12CC2 /* xingheader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xingheader.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/taglib/include/taglib/xingheader.h; sourceTree = SOURCE_ROOT; };
 		10348B1D44D757552F9D12E8 /* codec_def.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = codec_def.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/openh264/include/wels/codec_def.h; sourceTree = SOURCE_ROOT; };
 		117A1E74C3F3F4C4DA4155C6 /* speex_header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = speex_header.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/speex/include/speex/speex_header.h; sourceTree = SOURCE_ROOT; };
+		11B144829FAF18252732DDA8 /* nnlschroma.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nnlschroma.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/nnlschroma.h; sourceTree = SOURCE_ROOT; };
 		12372B021A3A851EB067212C /* audioproperties.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = audioproperties.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/taglib/include/taglib/audioproperties.h; sourceTree = SOURCE_ROOT; };
 		1398AD9270BF30D4A396E85A /* podcastframe.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = podcastframe.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/taglib/include/taglib/podcastframe.h; sourceTree = SOURCE_ROOT; };
 		159DB51387ADD0695A7E3C1C /* id3v2framefactory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = id3v2framefactory.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/taglib/include/taglib/id3v2framefactory.h; sourceTree = SOURCE_ROOT; };
@@ -205,6 +207,7 @@
 		393BA8D9E0FA8992FCE51853 /* xtea.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xtea.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg/include/libavutil/xtea.h; sourceTree = SOURCE_ROOT; };
 		39B3A8D4FD292F93C28B8AEC /* MyAppViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MyAppViewController.h; path = src/viewcontrollers/MyAppViewController.h; sourceTree = SOURCE_ROOT; };
 		39E03D768DDCB3C9962D2705 /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSliderGroup.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
+		3A6371B6A6632FD4618749CD /* nnlschroma.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = nnlschroma.cpp; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/nnlschroma.cpp; sourceTree = SOURCE_ROOT; };
 		3A8AD18F5B70A5EFD4699228 /* id3v2frame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = id3v2frame.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/taglib/include/taglib/id3v2frame.h; sourceTree = SOURCE_ROOT; };
 		3AB86AA0B3D16DF69EAC2403 /* ocsp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ocsp.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/gnutls/include/gnutls/ocsp.h; sourceTree = SOURCE_ROOT; };
 		3AD9C36E83D60F750FF7453A /* streamingalgorithm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = streamingalgorithm.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/streaming/streamingalgorithm.h; sourceTree = SOURCE_ROOT; };
@@ -319,6 +322,7 @@
 		6996D123C564B10B4379DB5C /* vp8dx.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vp8dx.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/libvpx/include/vpx/vp8dx.h; sourceTree = SOURCE_ROOT; };
 		6B93799F952B39596AF8CF31 /* oggfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = oggfile.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/taglib/include/taglib/oggfile.h; sourceTree = SOURCE_ROOT; };
 		6BC8B304142E02DB8E17CFB5 /* base64.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base64.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg/include/libavutil/base64.h; sourceTree = SOURCE_ROOT; };
+		6C256F4068F77B4A231149A0 /* nnls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nnls.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/nnls.h; sourceTree = SOURCE_ROOT; };
 		6C27EA5BD76D38D1C1F10302 /* ARAnchorManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ARAnchorManager.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxARKit/src/lib/ARAnchorManager.h; sourceTree = SOURCE_ROOT; };
 		6C88FB62467C8A25F5C5AC18 /* mp4properties.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mp4properties.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/taglib/include/taglib/mp4properties.h; sourceTree = SOURCE_ROOT; };
 		6DE3EF10450405167EF0E746 /* stereo3d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stereo3d.h; path = ../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg/include/libavutil/stereo3d.h; sourceTree = SOURCE_ROOT; };
@@ -1451,6 +1455,9 @@
 				8B6C6AC74432D5B95FA88D70 /* essentiautil.h */,
 				FCF46C2121A54531FBF7D9D1 /* iotypewrappers.h */,
 				8B679F9F6DACA339CA63EE8D /* iotypewrappers_impl.h */,
+				6C256F4068F77B4A231149A0 /* nnls.h */,
+				3A6371B6A6632FD4618749CD /* nnlschroma.cpp */,
+				11B144829FAF18252732DDA8 /* nnlschroma.h */,
 				D1A25A1EFBB9FD91263C26D4 /* parameter.cpp */,
 				4C846B1E3FAF5F79D6E6E8B6 /* parameter.h */,
 				E55FCEBFE46A5AD02AD6D0F1 /* pool.cpp */,
@@ -2233,7 +2240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rsync -avz --exclude='.DS_Store' \"${SRCROOT}/bin/data/\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
+			shellScript = "rsync -avz --exclude='.DS_Store' \"${SRCROOT}/bin/data/\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2242,7 +2249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3EBDC0D2347B269000A1374 /* Shaders.metal in Sources */,
+				B30D7C4E23524E1300037BA2 /* Shaders.metal in Sources */,
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
 				E4D8936F11527B74007E1F53 /* ofApp.mm in Sources */,
 				CB9CBC6D4EDF6466EB7BCF5B /* OFAppViewController.mm in Sources */,
@@ -2269,6 +2276,7 @@
 				554C60F369330DD52BA4A782 /* debugging.cpp in Sources */,
 				EE94A88CE93F1C6A428712B3 /* essentia.cpp in Sources */,
 				7DB93B2FAC72E143AAFD0FD2 /* essentiautil.cpp in Sources */,
+				B9A9F4EDD389FB8CB261F1E4 /* nnlschroma.cpp in Sources */,
 				19B0CCFCE310C069E5F4F2F3 /* parameter.cpp in Sources */,
 				EBB2C2DBFA7099F0DFABF657 /* pool.cpp in Sources */,
 				F40A6886F3BA71E61D067CDB /* range.cpp in Sources */,
@@ -2414,6 +2422,7 @@
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/utils/extractor_music,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/utils/tnt,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib,
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/ios,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg/include,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg/include/libavcodec,
@@ -2512,6 +2521,13 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/ios/libessentia.a,
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/osx/libessentia.a,
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/ios/libessentia.a,
+				);
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2566,6 +2582,7 @@
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/utils/extractor_music,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/include/essentia/utils/tnt,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib,
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/ios,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg/include,
 					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/ffmpeg/include/libavcodec,
@@ -2664,6 +2681,13 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/ios/libessentia.a,
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/osx/libessentia.a,
+					../../../../../of_v0.10.1_ios_release/addons/ofxMLTK/libs/essentia/lib/ios/libessentia.a,
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";

@@ -47,6 +47,8 @@ void ofApp::setup() {
     
     noMesh = true;
     
+    glLineWidth(2);
+    
     //=============== Sound Stuff ===============
     // setup the audio stream
     soundStream.setup(numberOfOutputChannels, numberOfInputChannels, sampleRate, frameSize, numberOfBuffers);
@@ -66,9 +68,7 @@ void ofApp::setup() {
     
     //=============== GUI Stuff ===============
     gui.setup();
-    gui.add(coefsNoveltyFactor.set("MFCC Coefs Novelty Factor", 1.0, 0.0001, 5000.0));
-//    gui.add(coefNumber.set("MFCC Coeficient", 4, 0, 12));
-//    gui.add(displayScope.setup("Display Scope"));
+    gui.add(coefsNoveltyFactor.set("MFCC Coefs Novelty Factor", 2.0, 0.0001, 10.0));
     //=============== GUI Stuff ===============
     
     //=============== Mesh Stuff ===============
@@ -113,21 +113,6 @@ void ofApp::setup() {
     }
     
     drawMesh = baseMesh;
-    //=============== Build Mesh ===============
-    
-    //=============== Animation Stuff ===============
-//    triggerIn = false;
-//    triggerOut = false;
-//    durationIn = 0.2; //seconds
-//    durationOut = 0.2; //seconds
-//    scale = 1;
-//    maxScale = 1.2;
-    //=============== Animation Stuff ===============
-    
-    //============ Sound Stuff ===============
-    kick.load("BOM_2_h_f_reverb.wav");
-    kick.setMultiPlay(true);
-    //============ Sound Stuff ===============
 }
 
 
@@ -136,36 +121,6 @@ void ofApp::setup() {
 void ofApp::update(){
     
     processor->update();
-    
-//    //=============== Animation In ===============
-//    //Quintic Ease Out function for In animation
-//    if(triggerIn == true && triggerOut == false && t < durationIn){
-//        t = ofGetElapsedTimef() - t1;
-//        float tInMapped = ofMap(t, 0, durationIn, 1, 0);
-//        float quinticOut = 1 - (tInMapped * tInMapped * tInMapped * tInMapped * tInMapped);
-//        scale = ofMap(quinticOut, 0, 1, 1, maxScale);
-//    }
-//    if(triggerIn == true && triggerOut == false && t >= durationIn){
-//        triggerIn = false;
-//        triggerOut = true;
-//        t1 = ofGetElapsedTimef();
-//        t = 0;
-//    }
-//    //=============== Animation In ===============
-//    //=============== Animation Out ==============
-//    //Linear Out animation
-//    if(triggerIn == false && triggerOut == true && t < durationOut){
-//        t = ofGetElapsedTimef() - t1;
-//        float tOutMapped = ofMap(t, 0, durationOut, 0, 1);
-//        float linearOut = 1 - tOutMapped;
-//        scale = ofMap(linearOut, 1, 0, maxScale, 1);
-//    }
-//    if(triggerIn == false && triggerOut == true && t >= durationOut){
-//        triggerIn = false;
-//        triggerOut = false;
-//        t = 0;
-//    }
-    //=============== Animation Out ==============
     
     //=============== Sound Stuff ===============
     // this runs the analysis chain that's been declared inside ofxMLTK
@@ -182,9 +137,11 @@ void ofApp::update(){
                 //This is just to bring coef[0] to the range of the other coefs
                 if (i == 0) {
                     coefsBuffer[i][j] = ofMap(abs((float)mfcc_coefs[i] / 100), 0.0f, 800.0f, 0.0f, coefsNoveltyFactor.get());
+//                    coefsBuffer[i][j] = ofMap(abs((float)mfcc_coefs[i] / 100), 0.0f, 800.0f, 0.0f, 2.0f);
                 }
                 else{
                     coefsBuffer[i][j] = ofMap(abs((float)mfcc_coefs[i]), 0.0f, 800.0f, 0.0f, coefsNoveltyFactor.get());
+//                    coefsBuffer[i][j] = ofMap(abs((float)mfcc_coefs[i]), 0.0f, 800.0f, 0.0f, 2.0f);
                 }
             }
             avg += coefsBuffer[i][j];
@@ -241,6 +198,12 @@ void ofApp::draw() {
                 
                 ofSetColor(255);
                 ofRotate(90,0,0,1);
+                
+                //=============== Debug =====================
+                cout << "mat.getTranslation: " << mat.getTranslation() << endl;
+                ofMatrix4x4 cam = convert<matrix_float4x4, ofMatrix4x4>(session.currentFrame.camera.transform);
+                cout << "Cam Pos: " << cam.getTranslation() << endl;
+                //=============== Debug =====================
 
                 if(i == 0){
                     drawMesh.draw();
@@ -252,7 +215,11 @@ void ofApp::draw() {
     }
     ofDisableDepthTest();
     // ========== DEBUG STUFF ============= //
-    processor->debugInfo.drawDebugInformation(font);
+//    processor->debugInfo.drawDebugInformation(font);
+    
+    // ========== GUI STUFF ============= //
+    gui.draw();
+    // ========== GUI STUFF ============= //
 }
 
 //--------------------------------------------------------------
@@ -274,21 +241,18 @@ void ofApp::touchDown(ofTouchEventArgs &touch){
             ARAnchor *anchor = [[ARAnchor alloc] initWithTransform:transform];
             
             [session addAnchor:anchor];
+            
+//            cout << "Anchor added: " << anchor << endl;
         }
         noMesh = false;
     }
-    else{
-        //=============== Animation Event ===============
-//        triggerIn = true;
-//        triggerOut = false;
-//        t1 = ofGetElapsedTimef();
-        //=============== Animation Event ===============
-        
-        //================ Sound Event ==================
-        kick.play();
-        //================ Sound Event ==================
-    }
 }
+
+//--------------------------------------------------------------
+void ofApp::audioIn(ofSoundBuffer &inBuffer){
+    inBuffer.getChannel(mltk.monoAudioBuffer, 0);
+}
+
 
 //--------------------------------------------------------------
 void ofApp::touchMoved(ofTouchEventArgs &touch){

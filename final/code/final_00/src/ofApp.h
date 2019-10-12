@@ -32,7 +32,9 @@ public:
     
     ofSoundStream soundStream;
     
-    void audioIn(ofSoundBuffer &inBuffer);
+//    void audioIn(ofSoundBuffer &inBuffer);
+    void audioIn(float * input, int bufferSize, int nChannels);
+    
     
     // These are the built-ins
     void setup();
