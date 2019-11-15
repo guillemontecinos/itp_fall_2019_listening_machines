@@ -29,14 +29,14 @@ public:
     void gotMemoryWarning();
     void deviceOrientationChanged(int newOrientation);
     
-    vector < matrix_float4x4 > mats;
-    vector<ARAnchor*> anchors;
-    ofCamera camera;
     ofTrueTypeFont font;
     ofImage img;
     bool noMesh;
 
     // ====== AR STUFF ======== //
+    vector < matrix_float4x4 > mats;
+    vector<ARAnchor*> anchors;
+    ofCamera camera;
     ARSession * session;
     ARRef processor;
     
@@ -45,16 +45,20 @@ public:
     MLTK mltk;
     ofSoundStream soundStream;
     void audioIn(ofSoundBuffer &inBuffer);
+//    void audioIn(float *input, int bufferSize, int nChannels);
+    void audioOut(ofSoundBuffer &outBuffer);
+//    void audioOut(float *output, int bufferSize, int nChannels);
+    ofSoundBuffer patchBuffer;
     
     bool showGui = true;
     bool showBands = true;
     bool showCoefs = true;
     
-    int numberOfOutputChannels = 0;
+    int numberOfOutputChannels = 1;
     int numberOfInputChannels = 1;
     int sampleRate = 44100;
     int frameSize = 1024;
-    int numberOfBuffers = 4;
+    int numberOfBuffers = 1;
     vector<vector<float>> coefsBuffer;
     vector<vector<float>> coefsAvg;
     int numCoefs;
@@ -63,9 +67,6 @@ public:
     ofxPanel gui;
     ofParameter<bool> showFps;
     ofParameter<float> coefsNoveltyFactor;
-//    ofParameter<int> coefNumber;
-//    ofxToggle displayScope;
-    
     
     //=============== Mesh Stuff ===============
     ofVec3f base, vec1, vec2, vec3, vecOut, rotVec1, rotVec2, rotVec3;
@@ -74,16 +75,6 @@ public:
     vector<ofVec3f> offsets;
     float scale;
     //=============== Mesh Stuff ===============
-    
-    //============ Animation Stuff ===============
-//    bool triggerIn, triggerOut;
-//    float t, t1, durationIn, durationOut, maxScale;
-//    int span;
-    //============ Animation Stuff ===============
-    
-    //============ Sound Stuff ===============
-//    ofSoundPlayer kick;
-    //============ Sound Stuff ===============
 };
 
 

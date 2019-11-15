@@ -47,11 +47,15 @@ void ofApp::setup() {
     
     noMesh = true;
     
-    glLineWidth(2);
+    glLineWidth(4);
+    
     
     //=============== Sound Stuff ===============
     // setup the audio stream
     soundStream.setup(numberOfOutputChannels, numberOfInputChannels, sampleRate, frameSize, numberOfBuffers);
+//    ofSoundStreamSetup(numberOfOutputChannels, numberOfInputChannels, sampleRate, frameSize, numberOfBuffers);
+//    patchBuffer.resize(frameSize);
+    patchBuffer.setSampleRate(sampleRate);
     // mltk setup
     mltk.setup(frameSize, sampleRate, frameSize/2);
     mltk.run();
@@ -82,7 +86,7 @@ void ofApp::setup() {
     //=============== Mesh Stuff ===============
     //=============== Build Mesh ===============
     
-    for (float t = 0; t < 20; t += 0.01) {
+    for (float t = 0; t < 15; t += 0.01) {
         vec1.scale(100 * ofNoise(t));
         vec2.scale(200 * ofNoise(2.71828 * t));
         vec3.scale(300 * ofNoise(5000 * t));
@@ -196,7 +200,8 @@ void ofApp::draw() {
                 ofMatrix4x4 mat = convert<matrix_float4x4, ofMatrix4x4>(anchor.transform);
                 ofMultMatrix(mat);
                 
-                ofSetColor(255);
+//                ofSetColor(73, 112, 19, 120);
+                ofSetColor(255,180);
                 ofRotate(90,0,0,1);
                 
                 //=============== Debug =====================
@@ -241,8 +246,6 @@ void ofApp::touchDown(ofTouchEventArgs &touch){
             ARAnchor *anchor = [[ARAnchor alloc] initWithTransform:transform];
             
             [session addAnchor:anchor];
-            
-//            cout << "Anchor added: " << anchor << endl;
         }
         noMesh = false;
     }
@@ -251,8 +254,22 @@ void ofApp::touchDown(ofTouchEventArgs &touch){
 //--------------------------------------------------------------
 void ofApp::audioIn(ofSoundBuffer &inBuffer){
     inBuffer.getChannel(mltk.monoAudioBuffer, 0);
+    inBuffer.getChannel(patchBuffer, 0);
 }
 
+//void ofApp::audioIn(float *input, int bufferSize, int nChannels){
+//
+//}
+
+//--------------------------------------------------------------
+void ofApp::audioOut(ofSoundBuffer &outBuffer){
+    outBuffer.setChannel(patchBuffer, 0);
+//    outBuffer.setChannel(patchBuffer, 1);
+}
+
+//void ofApp::audioOut(float *output, int bufferSize, int nChannels){
+//    
+//}
 
 //--------------------------------------------------------------
 void ofApp::touchMoved(ofTouchEventArgs &touch){
